@@ -12,13 +12,13 @@ export default function Page() {
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-          <h1 className="text-blue-500 text-6xl">I&apos;m blue!</h1>
+          <h1 className="text-blue-500 text-6xl">Hi Everyone!</h1>
           <p className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}>
-            <strong>Welcome to Acme.</strong> This is the example for the{' '}
-            <a href="https://nextjs.org/learn/" className="text-blue-500">
-              Next.js Learn Course
-            </a>
-            , brought to you by Vercel.
+            <strong>It&apos;s my study project.</strong> <br></br>
+            This is the example of {' '}
+            <a href="https://vholodiukdashboard.vercel.app/" className="text-blue-500">
+              Dashboard
+            </a>, I setup it on Vercel.
           </p>
           <Link
             href="/login"
