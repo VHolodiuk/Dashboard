@@ -9,10 +9,10 @@ export const authConfig = {
       const isLoggedIn = !!auth?.user;
       const isOnDashboard = nextUrl.pathname.startsWith('/dashboard');
       if (isOnDashboard) {
-        if (isLoggedIn) return true;
         if (nextUrl.origin != 'http://localhost:3000') {
-          return Response.redirect('https://vholodiukdashboard.vercel.app/login');
+          return Response.redirect('https://vholodiukdashboard.vercel.app/dashboard');
         }
+        if (isLoggedIn) return true;
         return false; // Redirect unauthenticated users to login page
       } else if (isLoggedIn) {
         if (nextUrl.origin != 'http://localhost:3000') {
