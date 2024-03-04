@@ -12,8 +12,10 @@ export const authConfig = {
         if (isLoggedIn) return true;
         return false; // Redirect unauthenticated users to login page
       } else if (isLoggedIn) {
-        console.log(nextUrl);
-        const newUrl = nextUrl.origin + '/dashboard';
+        let newUrl = nextUrl.origin + '/dashboard';
+        if (nextUrl.origin != 'http://localhost:3000') {
+          newUrl = 'https://vholodiukdashboard.vercel.app/dashboard';
+        }
         return Response.redirect(new URL(newUrl, nextUrl));
       }
       return true;
