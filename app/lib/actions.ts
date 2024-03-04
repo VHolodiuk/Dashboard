@@ -20,7 +20,7 @@ const FormSchema = z.object({
   }),
   date: z.string(),
 });
- 
+
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
 // This is temporary until @types/react-dom is updated
 export type State = {
